@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <title>GameBox</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -38,4 +45,92 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./assets/js/script.js"></script>
+    <header class="is-flex is-flex-direction-row is-justify-content-space-between has-background-grey-light p-5">
+        <i class="has-text-weight-bold p-2 has-text-danger">GameBox</i>
+        <form id="form" role="search" class="is-flex is-flex-direction-row is-justify-content-space-between mb-2">
+            <input action="search" id="query" name="q" placeholder="Search Games..." class="mr-2">
+            <button id="SearchBtn" value="input" class="has-background-danger px-3">Search</button>
+        </form>
+    </header>
+    <main>
+        <section class="columns">
+            <section class="column is-one-quarter tile is-ancestor pt-6 is-vertical">
+                <div class="tile is-parent">
+                    <article class="tile is-child notification has-background-primary-light">
+                        <div class="content">
+                            <p class="title">list items of local storage title</p>
+                            <p class="subtitle">dynamic buttons will be made in here</p>
+                            <div class="content">
+                                the save button for the list will be made here.
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="column is-half tile is-ancestor pt-6">
+                <div class="tile is-6 is-parent is-vertical">
+                    <article class="tile is-child notification is-danger">
+                        <p class="title">Video Game Title</p>
+                        <p class="subtitle">Released:</p>
+                        <div class="content ">
+                            <article class="tile is-child notification is-primary">
+                                <p class="title">Description:</p>
+                                <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Velit beatae consequuntur suscipit qui alias doloribus expedita,
+                                    est odit optio esse reprehenderit voluptas similique nam modi consequatur iusto
+                                    possimus nisi labore.</p>
+                            </article>
+                        </div>
+                    </article>
+                    <article class="tile is-child notification is-info">
+                        <p class="title">Rating:</p>
+                        <p class="subtitle">insert rating from data here</p>
+                    </article>
+                    <article class="tile is-child notification is-success">
+                        <p class="title">Platforms:</p>
+                        <p class="subtitle">insert rating from data here</p>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child notification has-background-grey-lighter">
+                        <div class="content">
+                            <p class="title">Image section</p>
+                            <p class="subtitle">Image from data goes here this is just a
+                                rough draft of the layout
+                            </p>
+                            <div class="content">
+                                <!-- Content -->
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="chartsection" class="column is-one-quarter tile is-ancestor pt-6 is-vertical">
+                <div class="tile is-parent">
+                    <article class="tile is-child notification has-background-primary-light">
+                        <div class="content">
+                            <p class="title">chart section of the page</p>
+                            <p class="subtitle"></p>
+                            <div class="content">
+                                <!-- Content -->
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+        <div id="modalWindow" style="display: none;">
+              <div class = "modalcontent">
+                <p>Please Try Again! Current name not found.</p>
+                <span id = "xbtn" onclick="hideModal()">&#10006;</span>
+              </div>
+          </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+
 </html>
