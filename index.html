@@ -15,7 +15,7 @@
     <title>GameBox</title>
 </head>
 
-<body>
+<body onload="pageLoad()">
     <header class="is-flex is-flex-direction-row is-justify-content-space-between has-background-grey-light p-5">
         <i class="has-text-weight-bold p-2 has-text-danger">GameBox</i>
         <form id="form" role="search" class="is-flex is-flex-direction-row is-justify-content-space-between mb-2">
@@ -41,36 +41,50 @@
             <section class="column is-half tile is-ancestor pt-6">
                 <div class="tile is-6 is-parent is-vertical">
                     <article class="tile is-child notification is-danger">
-                        <p class="title" id="vgTitle">Video Game Title</p>
-                        <p class="subtitle" id="releaseDate">Released:</p>
+                        <p class="title" id="vgTitle"></p>
+                        <p class="subtitle" id="releaseDate"></p>
                         <div class="content ">
                             <article class="tile is-child notification is-primary">
                                 <p class="title">Description:</p>
-                                <p class="subtitle" id="vgDescription">Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit.
-                                    Velit beatae consequuntur suscipit qui alias doloribus expedita,
-                                    est odit optio esse reprehenderit voluptas similique nam modi consequatur iusto
-                                    possimus nisi labore.</p>
+                                <p class="subtitle" id="vgDescription"></p>
                             </article>
                         </div>
                     </article>
-                    <article class="tile is-child notification is-info">
-                        <p class="title">Rating:</p>
-                        <p class="subtitle" id="vgRating">insert rating from data here</p>
-                    </article>
-                    <article class="tile is-child notification is-success">
-                        <p class="title">Platforms:</p>
-                        <p class="subtitle" id="vgPlatforms">insert rating from data here</p>
-                    </article>
+
                 </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child notification has-background-grey-lighter">
-                        <div class="content">
+                <div class="tile is-6 is-parent is-vertical">
+                    <div class="tile is-child is-vertical">
+                        <article class="tile is-child notification is-info">
+                            <p class="title">Rating:</p>
+                            <p class="subtitle" id="vgRating"></p>
+                        </article>
+                        <article class="tile is-child notification is-success" id="vgPlatformscontainer">
+                            <p class="title">Platforms:</p>
+                            <p class="subtitle" id="vgPlatforms"></p>
+                        </article>
+                        <article class="tile notification has-background-grey-lighter" id="vgimgcontainer">
                             <div class="content">
-                                <!-- Content -->
+                                <div class="content" id="vgImages">
+                                    <!-- Content -->
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                        <article class="tile is-child notification is-primary">
+                            <p class="title"></p>
+                            <p class="subtitle"></p>
+                            <div class="content ">
+                                <article class="tile is-child notification has-background-link" id="saveform">
+                                    <p class="title"></p>
+                                    <p class="subtitle"></p>
+                                    <form>
+                                        <button type="submit"
+                                            class="notification has-background-danger is-flex is-justify-content-center pr-5"
+                                            id="savebtn">Save Game</button>
+                                    </form>
+                                </article>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </section>
             <section id="chartsection" class="column is-one-quarter tile is-ancestor pt-6 is-vertical">

@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
 }
 
 header {
@@ -113,18 +112,55 @@ i:hover {
   cursor: pointer;
 }
 
-#xbtn{
-    display: flex;
-    justify-content: right;
-    align-items: center;
+#xbtn {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+*/ #vgImages>img {
+  width: 100%;
+  height: 100%;
+}
+
+#vgimgcontainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#vgDescription {
+  font-size: 95%;
+}
+
+#savebtn {
+  border: 2.5px solid rgba(255, 182, 182, 0.534);
+  font-family: 'Martian Mono';
+  font-weight: 600;
+  color: white;
+  width: 325px;
+}
+
+#savebtn:hover {
+  border: none;
+}
+
+#saveform {
+  display: flex;
+  justify-content: left;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    display: block;
   }
+}
 
 #ratingChart {
   background-color: rgb(250, 6, 6);
   color: rgb(0, 0, 0);
 }
 
-#popChart {
+/* #popChart {
   color: rgb(212, 6, 6);
-  background-color: rgb(11, 228, 65)
-}
+  /* background-color: rgb(11, 228, 65);
