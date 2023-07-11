@@ -1,12 +1,15 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-header{
-    width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
 }
-#query{
+
+header {
+  width: 100%;
+}
+
+#query {
   display: flex;
   flex-wrap: wrap;
   border-radius: 5px;
@@ -16,43 +19,50 @@ header{
   padding-left: 3%;
   width: 100%;
 }
-#SearchBtn{
+
+#SearchBtn {
   border: none;
   color: azure;
   border-radius: 5px;
 }
-form{
-    width: 25%;
+
+form {
+  width: 25%;
 }
-#chartsection{
-    padding-bottom: 1.8%;
+
+#chartsection {
+  padding-bottom: 1.8%;
 }
-main{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 3%;
-    height: 900px;
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3%;
+  height: 900px;
 }
-i{
-    font-family: 'Martian Mono';
-    border: solid 2px;
-    background: rgba(255, 182, 182, 0.363);
-    border-radius: 10px;
-    transform: skew(-15deg, 0deg);
+
+i {
+  font-family: 'Martian Mono';
+  border: solid 2px;
+  background: rgba(255, 182, 182, 0.363);
+  border-radius: 10px;
+  transform: skew(-15deg, 0deg);
 }
-i:hover{
-    transform: skew(0deg, 0deg);
-    cursor: pointer;
+
+i:hover {
+  transform: skew(0deg, 0deg);
+  cursor: pointer;
 
 
 }
+
 #modalWindow {
-    /* position: fixed;
+  /* position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0; */
-    /* background: rgba(0, 0, 0, 1);
+  /* background: rgba(0, 0, 0, 1);
     margin: auto;
     padding: 10px;
     width: 400px;
@@ -60,40 +70,61 @@ i:hover{
     font-family: arial;
     font-size: 14px;
     text-align: center;*/
-    color: azure; 
-    /* display: none; Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 12px; /* Location of the box */
+  color: azure;
+  /* display: none; Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 12px;
+  /* Location of the box */
   padding-bottom: 12px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 7%; /* Full height */
+  width: 100%;
+  /* Full width */
+  height: 7%;
+  /* Full height */
   /* overflow: auto; Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); 
-  }
-  .modalcontent{
-    display: flex;
-    justify-content: space-between;
-  }
-  .modalcontent > p{
-    margin-left: 1%;
-    font-weight: 700;
-  }
-  #xbtn{
-    margin-right: 1%;
-    font-weight: 800;
-  }
-  #xbtn:hover, #xbtn:focus{
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  /* #xbtn{
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalcontent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalcontent>p {
+  margin-left: 1%;
+  font-weight: 700;
+}
+
+#xbtn {
+  margin-right: 1%;
+  font-weight: 800;
+}
+
+#xbtn:hover,
+#xbtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#xbtn{
     display: flex;
     justify-content: right;
     align-items: center;
-  } */
+  }
 
+#ratingChart {
+  background-color: rgb(250, 6, 6);
+  color: rgb(0, 0, 0);
+}
+
+#popChart {
+  color: rgb(212, 6, 6);
+  background-color: rgb(11, 228, 65)
+}

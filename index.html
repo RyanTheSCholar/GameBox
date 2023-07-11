@@ -74,10 +74,17 @@
             </section>
             <section id="chartsection" class="column is-one-quarter tile is-ancestor pt-6 is-vertical">
                 <div class="tile is-parent">
-                    <article class="tile is-child notification has-background-primary-light">
-                        <div class="content">
-                            <p class="title">chart section of the page</p>
-                            <p class="subtitle"></p>
+                    <article class="tile is-child notification has-background-danger">
+                        <div class="content chartBox" id=" chartContent">
+                            <p class="title">Comparable Ratings</p>
+                            <p>** hover over chart to get specific rating**</p>
+                            
+                            <canvas class=" notification has-background-grey-lighter"id="ratingChart" height="150" width="175"></canvas>
+                                
+                            
+                            <canvas class="notification has-background-grey-lighter" height="150" width="175" id="popChart"></canvas>
+                            
+                            <p class="subtitle legendBox"></p>
                             <div class="content">
                                 <!-- Content -->
                             </div>
@@ -93,11 +100,10 @@
               </div>
           </div>
     </main>
-
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-    <script src="assets/js/script.js"></script>
+    
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 </html>
