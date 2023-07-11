@@ -67,7 +67,13 @@ function searchGame(inputVal) {
             console.log(platformsString);
             videoGamePlatforms.textContent = platformsString;
 
+            // image
+            var videoGameImage = document.createElement('img');
+            videoGameContainer.appendChild(videoGameImage);
+            var videoGameImageURL = data.background_image;
+            videoGameImage.setAttribute("src", videoGameImageURL);
 
+// end
             var genreString = "";
             for (i = 0; i < data.genres.length; i++) {
                 console.log(data.genres[i].id);
