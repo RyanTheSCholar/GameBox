@@ -1,7 +1,6 @@
 var rawgAPIKey = "9291f496b0954cfd85fdd080b9cd538f";
 var fullGameList = "https://api.rawg.io/api/games?key=" + rawgAPIKey;
-
-  AOS.init();
+ AOS.init();
 
 // ? Sample RAWG API links for reference
 // Full list of games - https://api.rawg.io/api/games?key=5e68bfa8ec8141a990c74c4ebefb01ea

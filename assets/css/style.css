@@ -121,12 +121,9 @@ i:hover {
   display: flex;
   justify-content: left;
 }
-@media only screen and (max-width: 768px) {
-  header {
-    display: block;
-  }
+
   
-}
+
 /* #ratingChart {
   background-color: rgb(250, 6, 6);
   color: rgb(231, 230, 230);
@@ -134,9 +131,8 @@ i:hover {
 /* #popChart {
   color: rgb(212, 6, 6);
   /* /* background-color: rgb(11, 228, 65); */
-  .removebuttonstyle{
-    
-  }
+
+  
 .removebuttonstyle:hover {
   border:none;
 }
@@ -144,3 +140,24 @@ i:hover {
   display: block;
 
 }
+@media only screen and (max-width: 768px) {
+  header {
+    display: block !important;
+  }
+  #mediabutton{
+    width: 150px;
+    margin-left: 37% !important;
+    padding: 2% !important;
+    
+  }
+  #saveBtn{
+    width: 100px;
+    /* padding-left: 5% !important; */
+    position: relative;
+    left: 8px;
+    text-align: center;
+  }
+  #saveform{
+    display: flex;
+    padding: 4% !important;
+  }}
