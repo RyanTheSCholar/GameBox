@@ -1,4 +1,4 @@
-var rawgAPIKey = "9ebbf9679be0432fb3bc33d2de55d998";
+var rawgAPIKey = "afe2446d033e4b5197325726cd2f5fb8";
 var fullGameList = "https://api.rawg.io/api/games?key=" + rawgAPIKey;
 
 // ? Sample RAWG API links for reference
@@ -30,7 +30,7 @@ function searchBar(event) {
 var searchEl = document.querySelector("#SearchBtn")
 
 //! Code that runs when Search button is pressed (almost all code should go here)
-function searchGame(inputVal) 
+function searchGame(inputVal) {
     console.log(inputVal);
     var specificGameURL = "https://api.rawg.io/api/games/" + inputVal.replace(/\s+/g, '-').toLowerCase() + "?key=" + rawgAPIKey;
     // Collect user input for the game search and store it in a variable
@@ -109,6 +109,9 @@ var chartStatus = Chart.getChart("ratingChart"); // <canvas> id
 if (chartStatus != undefined) {
   chartStatus.destroy();
 }
+
+
+
 
 
 new Chart(ctx, {
@@ -344,9 +347,10 @@ new Chart(ctx1, {
     }
   }
 });
-
+};
 // Add event listener to Search button element
 searchEl.addEventListener("click", searchBar);
+
 // var input = document.getElementById("query");
 
 // function SearchBar(event) {
@@ -387,3 +391,7 @@ searchEl.addEventListener("click", searchBar);
   //   console.log(fullGameList);
   // });
 // }
+
+
+
+
