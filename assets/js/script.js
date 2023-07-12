@@ -33,7 +33,7 @@ function searchBar(event) {
 // List of games object on console log
 function pageLoad() {
   var pageLoadURL =
-    "https://api.rawg.io/api/games/modern-warfare?key=" + rawgAPIKey;
+    "https://api.rawg.io/api/games/borderlands?key=" + rawgAPIKey;
 
   fetch(pageLoadURL)
     .then(function (res) {
@@ -235,6 +235,9 @@ function searchGame(inputVal) {
       if (data.redirect === true) {
         showModal();
       }
+      if(data.redirect === true){
+        inputVal = data.slug;
+      }
       // make website content here
       // game title/ release/ description
       var videoGameTitle = document.querySelector("#vgTitle");
@@ -424,10 +427,11 @@ function renderWishlist() {
   for (var i = 0; i < wishlistArray.length; i++) {
     var wishlistGame = wishlistArray[i];
 
-    var li = document.createElement("li");
+    var li = document.createElement("button");
     li.textContent = wishlistGame;
     li.setAttribute("data-index", i);
-    li.setAttribute("style","list-style-type: none; margin-right: 1%; margin-bottom: 4%; background-color: hsl(204, 86%, 53%); width: 75%; color: white; border-radius: 2px; padding: 3%; display: flex; justify-content: space-between;");
+    li.setAttribute("style","margin-right: 1%; margin-bottom: 4%; background-color: hsl(204, 86%, 53%); width: 75%; color: white; border-radius: 2px; border: none; padding: 3%; display: flex; justify-content: space-between;");
+    li.setAttribute("class", "liStyles");
 
     var removeButton = document.createElement("button");
     removeButton.setAttribute("style", "margin-left: 1%; background-color: hsl(348, 100%, 61%); border: 1px solid rgba(255, 182, 182, 0.534); padding: 1%; display: flex; height: 25px;");
@@ -455,6 +459,21 @@ function renderWishlist() {
         event.target.setAttribute("style", "margin-left: 1%; background-color: hsl(348, 100%, 61%); border: 1px solid rgba(255, 182, 182, 0.534); padding: 1%; height: 25px;");
       }
     });
+    li.addEventListener("mouseover", function(event){
+      if(event.target.classList.contains("liStyles")){
+        event.target.setAttribute("style", "margin-right: 1%; margin-bottom: 4%; background-color: hsl(204, 86%, 53%); width: 75%; color: white; border-radius: 2px; border: none; padding: 3%; display: flex; justify-content: space-between;");
+      }
+    });
+    li.addEventListener("mouseout", function(event){
+      if(event.target.classList.contains("liStyles")){
+        event.target.setAttribute("style", "margin-right: 1%; margin-bottom: 4%; background-color: hsl(204, 86%, 53%); width: 75%; color: white; border-radius: 2px; border: 1px solid blue; padding: 3%; display: flex; justify-content: space-between;");
+      }
+    });
+    li.addEventListener("click", function(){
+      var videoGameContainerParent = document.getElementById("vgImages");
+      videoGameContainerParent.innerHTML = "";
+      searchGame(this.textContent.replace(/\s+/g, "-").replace(/:/g,"").toLowerCase());
+    })
     li.appendChild(removeButton);
     wishlist.appendChild(li);
   }
