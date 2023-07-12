@@ -1,5 +1,7 @@
 # GameBox
 
+https://ryanthescholar.github.io/GameBox/
+
 ## Description
 
 Our goal for this application was to make a user experience that allows navigation through the rawg.io API in a manner that is suited for an easy and intuitive layout in order to provide the information on the video games they wish to gain more knowledge on. We learned how to work together as a group to achieve a MVP within a weeks worth of work. Specific skills acquired include the ability to fully implement a chart.js graph with API data inserted in the graph, also picking up lots of knowledge on fetching API's and creating dynamic elements to the website, other abilities obtained: Bulma, FontAwesome, googleFonts. these different frameworks, libraries and resources allowed us to accomplish our goal of having a minimum viable product.
